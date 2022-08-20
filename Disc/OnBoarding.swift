@@ -6,9 +6,11 @@ class OnBoarding: UIViewController {
     let labelTitle = UILabel()
     let labelText = UILabel()
     let getStartedBtn = UIButton()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         styling()
     }
 
@@ -23,7 +25,7 @@ extension OnBoarding{
         
         view.addSubview(imageOnboarding)
         imageOnboarding.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(48)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.centerX.equalToSuperview()
         }
         
@@ -85,7 +87,7 @@ extension OnBoarding{
             green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
             blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
             alpha: CGFloat(1.0)
-        )
+        ) 
     }
     
     @objc func loginTransition(){
