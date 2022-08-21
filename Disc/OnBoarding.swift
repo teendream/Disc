@@ -56,7 +56,7 @@ extension OnBoarding{
         getStartedBtn.setTitle("Start exploring", for: [])
         getStartedBtn.setTitleColor(.white, for: .normal)
         getStartedBtn.backgroundColor = color3
-        getStartedBtn.layer.cornerRadius = 8
+        getStartedBtn.layer.cornerRadius = 10
         getStartedBtn.addTarget(self, action: #selector(loginTransition), for: .touchUpInside)
         
         view.addSubview(getStartedBtn)
