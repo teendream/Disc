@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class Login:UIViewController{
+class LoginVC:UIViewController{
     let signInTitle = UILabel()
     let signInDescription = UILabel()
     let createOption = UIStackView()
@@ -23,14 +23,14 @@ class Login:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = AppColors.loginBackground
         navigationController?.navigationBar.isHidden = true
         styling()
     }
     
 }
 
-extension Login{
+extension LoginVC{
     private func styling(){
         signInTitle.text = "Sign in"
         signInTitle.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
@@ -61,7 +61,7 @@ extension Login{
         createOption.spacing = 8
         
         createAccount.text = "Don't have account?"
-        createAccount.textColor = UIColor(named: "6F6F6F")
+        createAccount.textColor = AppColors.darkGray
         createAccount.font = UIFont.systemFont(ofSize: 14, weight: .light)
         createOption.addArrangedSubview(createAccount)
         
@@ -84,7 +84,7 @@ extension Login{
         
         mailWrapper.addArrangedSubview(mailLabel)
         mailLabel.text = "Email"
-        mailLabel.textColor = UIColor(named: "90A3BF")
+        mailLabel.textColor = AppColors.lightGray
         mailLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         
         mailWrapper.addArrangedSubview(mailTextField)
@@ -101,7 +101,7 @@ extension Login{
         
         passwordWrapper.addArrangedSubview(passwordLabel)
         passwordLabel.text = "Password"
-        passwordLabel.textColor = UIColor(named: "90A3BF")
+        passwordLabel.textColor = AppColors.lightGray
         passwordLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         
         passwordWrapper.addArrangedSubview(passwordTextField)
@@ -114,7 +114,7 @@ extension Login{
         
         forgotPassword.setTitle("Forgot password?", for: [])
         view.addSubview(forgotPassword)
-        forgotPassword.setTitleColor(UIColor(named: "0957DE"), for: .normal)
+        forgotPassword.setTitleColor(AppColors.darkBlue, for: .normal)
         forgotPassword.snp.makeConstraints { make in
             make.top.equalTo(mailPasswordWrapper.snp.bottom).offset(16)
             make.right.equalToSuperview().offset(-24)
@@ -136,7 +136,7 @@ extension Login{
         facebookButton.setImage(UIImage(named: "facebook"), for: .normal)
         
         loginViaLabel.text = "Or sign in using your social profile"
-        loginViaLabel.textColor = UIColor(named: "6F6F6F")
+        loginViaLabel.textColor = AppColors.darkGray
         loginViaLabel.font = UIFont.systemFont(ofSize: 14, weight: .light)
         view.addSubview(loginViaLabel)
         loginViaLabel.snp.makeConstraints { make in
@@ -146,8 +146,9 @@ extension Login{
         
         signInButton.setTitle("Sign in", for: [])
         signInButton.setTitleColor(.white, for: .normal)
-        signInButton.backgroundColor = UIColor(named: "0957DE")
+        signInButton.backgroundColor = AppColors.darkBlue
         signInButton.layer.cornerRadius = 8
+        signInButton.addTarget(self, action: #selector(goHome), for: .touchUpInside)
         view.addSubview(signInButton)
         signInButton.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(24)
@@ -155,5 +156,9 @@ extension Login{
             make.bottom.equalTo(loginViaLabel).offset(-32)
             make.height.equalTo(52)
         }
+    }
+    
+    @objc func goHome(){
+        navigationController?.pushViewController(HomeVC(), animated: true)
     }
 }

@@ -10,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let nav  = UINavigationController(rootViewController: OnBoarding())
+        let nav  = UINavigationController(rootViewController: OnBoardingVC())
         window?.rootViewController = nav
         
         return true
