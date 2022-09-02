@@ -75,10 +75,9 @@
 		7F939E5F28ACCB2600F26B3B /* Disc */ = {
 			isa = PBXGroup;
 			children = (
+				7FAC20E428C2308A00778D98 /* UserInterface */,
+				7FAC20E328C2305A00778D98 /* Coordinator */,
 				7F939E6028ACCB2600F26B3B /* AppDelegate.swift */,
-				7F939E6428ACCB2600F26B3B /* OnBoardingVC.swift */,
-				7F70B99F28AD02D3006BD725 /* LoginVC.swift */,
-				7FAC20DD28C226D200778D98 /* HomeVC.swift */,
 				7FAC20DF28C2284600778D98 /* AppColors.swift */,
 				7FAC20E128C2299600778D98 /* UIColor.swift */,
 				7F939E6B28ACCB2700F26B3B /* LaunchScreen.storyboard */,
@@ -86,6 +85,71 @@
 				7FAC20DB28C20A7B00778D98 /* Assets.xcassets */,
 			);
 			path = Disc;
+			sourceTree = "<group>";
+		};
+		7FAC20E328C2305A00778D98 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7FAC20E428C2308A00778D98 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				7FAC20EA28C2311900778D98 /* Profile */,
+				7FAC20E928C2310B00778D98 /* Collection */,
+				7FAC20E828C230F700778D98 /* Search */,
+				7FAC20E728C230E600778D98 /* Events */,
+				7FAC20E628C230C000778D98 /* Home */,
+				7FAC20E528C230B400778D98 /* Login */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		7FAC20E528C230B400778D98 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7F939E6428ACCB2600F26B3B /* OnBoardingVC.swift */,
+				7F70B99F28AD02D3006BD725 /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7FAC20E628C230C000778D98 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7FAC20DD28C226D200778D98 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7FAC20E728C230E600778D98 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		7FAC20E828C230F700778D98 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		7FAC20E928C2310B00778D98 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		7FAC20EA28C2311900778D98 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		E6B50205BAD1F0255DAA2DCF /* Pods */ = {
